@@ -4,7 +4,7 @@ import cn from "classnames";
 
 export function MenuItem({
   pathname,
-  children
+  children,
 }: PropsWithChildren<{ pathname: string }>) {
   const location = useLocation();
   const isActive = location.pathname === pathname;

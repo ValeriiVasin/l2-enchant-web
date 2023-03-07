@@ -7,7 +7,7 @@ export function TableRow({
   index,
   chance,
   result,
-  formatEnchant = defaultFormatEnchant
+  formatEnchant = defaultFormatEnchant,
 }: TableRowProps) {
   return (
     <tr>

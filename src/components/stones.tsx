@@ -8,7 +8,7 @@ function BigStones() {
   const tableRows = useTableRowProps({
     chances,
     mode: Mode.Drop,
-    resultMode: "enchants"
+    resultMode: "enchants",
   });
   const formatEnchant = useFormatter({ startIndex: 2, type: "level" });
   return (
@@ -25,7 +25,7 @@ function SuperiorStones() {
   const tableRows = useTableRowProps({
     chances,
     mode: Mode.Drop,
-    resultMode: "enchants"
+    resultMode: "enchants",
   });
   const formatEnchant = useFormatter({ startIndex: 2, type: "level" });
   return (

@@ -1,7 +1,7 @@
 import { useMemo } from "react";
-import { calculateEnchant } from '../helpers/calculate-enchant';
-import { toTableRowProps } from '../helpers/to-table-row-props';
-import { unwrapSafeDrops } from '../helpers/unwrap-safe-drops';
+import { calculateEnchant } from "../helpers/calculate-enchant";
+import { toTableRowProps } from "../helpers/to-table-row-props";
+import { unwrapSafeDrops } from "../helpers/unwrap-safe-drops";
 import { EnchantResultMode, Mode, TableRowProps } from "../types";
 
 type UseTableRowPropsOptions = {
@@ -11,7 +11,7 @@ type UseTableRowPropsOptions = {
 };
 
 function shouldUnwrapChances(
-  chances: UseTableRowPropsOptions["chances"]
+  chances: UseTableRowPropsOptions["chances"],
 ): chances is Array<Array<number>> {
   return Array.isArray(chances[0]);
 }
@@ -19,7 +19,7 @@ function shouldUnwrapChances(
 export function useTableRowProps({
   chances,
   mode,
-  resultMode
+  resultMode,
 }: UseTableRowPropsOptions): Array<TableRowProps> {
   return useMemo(() => {
     if (shouldUnwrapChances(chances)) {

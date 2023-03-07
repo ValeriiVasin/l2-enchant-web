@@ -1,6 +1,6 @@
 export enum Mode {
   Drop,
-  Destroy
+  Destroy,
 }
 
 export type EnchantResult = {
@@ -12,7 +12,6 @@ export type EnchantResult = {
 export type EnchantResultMode = "items" | "enchants" | "both";
 
 export type FormatEnchantFunction = (index: number) => string;
-
 
 export type TableRowProps = {
   index: number;

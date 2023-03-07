@@ -7,14 +7,14 @@ const chances: Array<Array<number>> = [
   [70, 60, 50, 40, 60],
   [55, 50, 45, 40, 50],
   [45, 40, 35, 30, 30],
-  [25, 20, 15, 10]
+  [25, 20, 15, 10],
 ];
 
 export function CrystalAden() {
   const tableRows = useTableRowProps({
     chances,
     mode: Mode.Drop,
-    resultMode: "both"
+    resultMode: "both",
   });
   const formatEnchant = useFormatter({ type: "level", startIndex: 2 });
   return (

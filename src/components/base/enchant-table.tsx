@@ -10,7 +10,7 @@ type EnchantTableProps = {
 export function EnchantTable({
   title,
   tableRows,
-  formatEnchant
+  formatEnchant,
 }: EnchantTableProps) {
   return (
     <table className="pure-table">
