@@ -9,7 +9,7 @@ const chances = [80, 70, 60, 40, 30, 24, 16, 10, 10];
 export function TalismanOfAden() {
   const tableRows = toTableRowProps(
     calculateEnchant(chances, Mode.Destroy),
-    "items"
+    "items",
   );
   const formatEnchant = useFormatter({ startIndex: 2, type: "plus" });
   return (

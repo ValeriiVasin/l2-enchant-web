@@ -2,7 +2,7 @@ import { EnchantResult, Mode } from "../types";
 
 export function calculateEnchant(
   chances: number[],
-  mode = Mode.Drop
+  mode = Mode.Drop,
 ): Array<EnchantResult> {
   const coef = 100 / chances[0];
   const items = [mode === Mode.Drop ? 1 : coef];
@@ -19,6 +19,6 @@ export function calculateEnchant(
   return enchants.map((enchants, i) => ({
     chance: chances[i],
     enchants,
-    items: items[i]
+    items: items[i],
   }));
 }

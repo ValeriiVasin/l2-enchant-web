@@ -7,14 +7,14 @@ const chances = [
   [70, 60, 50, 40, 30],
   [50, 40, 30, 20, 20],
   [30, 20, 15, 10, 25],
-  [20, 15, 10, 5]
+  [20, 15, 10, 5],
 ];
 
 export function GrowthRune() {
   const tableRows = useTableRowProps({
     chances,
     mode: Mode.Drop,
-    resultMode: "both"
+    resultMode: "both",
   });
   const formatEnchant = useFormatter({ startIndex: 2, type: "level" });
   return (

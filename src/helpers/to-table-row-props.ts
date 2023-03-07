@@ -2,7 +2,7 @@ import { EnchantResult, EnchantResultMode, TableRowProps } from "../types";
 
 function getResultValue(
   result: EnchantResult,
-  mode: EnchantResultMode
+  mode: EnchantResultMode,
 ): number {
   if (mode === "enchants") {
     return result.enchants;
@@ -13,11 +13,11 @@ function getResultValue(
 
 export function toTableRowProps(
   results: Array<EnchantResult>,
-  mode: EnchantResultMode
+  mode: EnchantResultMode,
 ): Array<TableRowProps> {
   return results.map((result, index) => ({
     index,
     chance: result.chance,
-    result: getResultValue(result, mode)
+    result: getResultValue(result, mode),
   }));
 }

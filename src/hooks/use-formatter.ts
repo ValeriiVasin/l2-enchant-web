@@ -8,13 +8,13 @@ type UseFormatterOptions = {
 
 export function useFormatter({
   startIndex,
-  type
+  type,
 }: UseFormatterOptions): FormatEnchantFunction {
   return useCallback(
     (index: number) => {
       const adjustedIndex = index + startIndex;
       return type === "level" ? `Ур.${adjustedIndex}` : `+${adjustedIndex}`;
     },
-    [startIndex, type]
+    [startIndex, type],
   );
 }

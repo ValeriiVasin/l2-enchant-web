@@ -8,7 +8,7 @@ export function DragonBelt() {
   const tableRows = useTableRowProps({
     chances,
     mode: Mode.Destroy,
-    resultMode: "items"
+    resultMode: "items",
   });
   return <EnchantTable title="Пояс Дракона" tableRows={tableRows} />;
 }

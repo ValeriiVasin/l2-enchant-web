@@ -7,14 +7,14 @@ const chances: Array<Array<number>> = [
   [70, 60, 50, 40, 50],
   [60, 50, 40, 30, 50],
   [40, 30, 20, 10, 50],
-  [25, 20, 15, 10]
+  [25, 20, 15, 10],
 ];
 
 export function TalismanOfAuthority() {
   const tableRows = useTableRowProps({
     chances,
     mode: Mode.Drop,
-    resultMode: "both"
+    resultMode: "both",
   });
   const formatEnchant = useFormatter({ startIndex: 2, type: "level" });
   return (

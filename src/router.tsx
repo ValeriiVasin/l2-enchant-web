@@ -22,9 +22,9 @@ const router = createBrowserRouter([
       { path: "/talisman-of-authority", element: <TalismanOfAuthority /> },
       { path: "/talisman-of-benir", element: <TalismanOfBenir /> },
       { path: "/stones", element: <Stones /> },
-      { path: "/growth-rune", element: <GrowthRune /> }
-    ]
-  }
+      { path: "/growth-rune", element: <GrowthRune /> },
+    ],
+  },
 ]);
 
 export function Router() {
