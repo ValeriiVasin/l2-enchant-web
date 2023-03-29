@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`unwraps safe drops 1`] = `
+[
+  {
+    "chance": 50,
+    "enchants": 2,
+    "items": 1,
+  },
+  {
+    "chance": 50,
+    "enchants": 6,
+    "items": 1,
+  },
+  {
+    "chance": 25,
+    "enchants": 10,
+    "items": 1,
+  },
+  {
+    "chance": 25,
+    "enchants": 26,
+    "items": 1,
+  },
+]
+`;

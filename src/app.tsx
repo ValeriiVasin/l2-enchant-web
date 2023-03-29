@@ -1,5 +1,5 @@
-import { Outlet } from "react-router-dom";
-import { Menu } from "./components/base/menu/menu";
+import { Outlet } from 'react-router-dom';
+import { Menu } from './components/base/menu/menu';
 
 export function App() {
   return (

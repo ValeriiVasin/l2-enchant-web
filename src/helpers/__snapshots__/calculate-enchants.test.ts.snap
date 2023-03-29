@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`strategy: destroy 1`] = `
+[
+  {
+    "chance": 50,
+    "enchants": 2,
+    "items": 2,
+  },
+  {
+    "chance": 50,
+    "enchants": 6,
+    "items": 4,
+  },
+  {
+    "chance": 50,
+    "enchants": 14,
+    "items": 8,
+  },
+]
+`;
+
+exports[`strategy: drop 1`] = `
+[
+  {
+    "chance": 50,
+    "enchants": 2,
+    "items": 1,
+  },
+  {
+    "chance": 50,
+    "enchants": 6,
+    "items": 1,
+  },
+  {
+    "chance": 50,
+    "enchants": 14,
+    "items": 1,
+  },
+]
+`;
+
+exports[`strategy: safe 1`] = `
+[
+  {
+    "chance": 50,
+    "enchants": 2,
+    "items": 1,
+  },
+  {
+    "chance": 50,
+    "enchants": 4,
+    "items": 1,
+  },
+  {
+    "chance": 50,
+    "enchants": 6,
+    "items": 1,
+  },
+]
+`;

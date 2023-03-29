@@ -1,5 +1,5 @@
-import { FormatEnchantFunction, TableRowProps } from "../../types";
-import { TableRow } from "./table-row";
+import { FormatEnchantFunction, TableRowProps } from '../../types';
+import { TableRow } from './table-row';
 
 type EnchantTableProps = {
   tableRows: Array<TableRowProps>;

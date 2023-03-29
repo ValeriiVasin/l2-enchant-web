@@ -1,5 +1,5 @@
-import { EnchantResult, Mode } from "../types";
-import { calculateEnchant } from "./calculate-enchant";
+import { EnchantResult, Mode } from '../types';
+import { calculateEnchant } from './calculate-enchant';
 
 export function unwrapSafeDrops(
   chanceGroups: Array<Array<number>>,

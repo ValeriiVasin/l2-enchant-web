@@ -1,7 +1,7 @@
-import { useFormatter } from "../hooks/use-formatter";
-import { useTableRowProps } from "../hooks/use-table-row-props";
-import { Mode } from "../types";
-import { EnchantTable } from "./base/enchant-table";
+import { useFormatter } from '../hooks/use-formatter';
+import { useTableRowProps } from '../hooks/use-table-row-props';
+import { Mode } from '../types';
+import { EnchantTable } from './base/enchant-table';
 
 const chances: Array<Array<number>> = [
   [60, 55, 50, 45, 45],
@@ -14,9 +14,9 @@ export function CrystalHardin() {
   const tableRows = useTableRowProps({
     chances,
     mode: Mode.Drop,
-    resultMode: "both",
+    resultMode: 'both',
   });
-  const formatEnchant = useFormatter({ startIndex: 2, type: "level" });
+  const formatEnchant = useFormatter({ startIndex: 2, type: 'level' });
   return (
     <EnchantTable
       title="Кристалл Хардина"
