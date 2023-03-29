@@ -1,4 +1,4 @@
-import { EnchantResult, Mode } from "../types";
+import { EnchantResult, Mode } from '../types';
 
 export function calculateEnchant(
   chances: number[],

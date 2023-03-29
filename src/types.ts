@@ -1,6 +1,7 @@
 export enum Mode {
-  Drop,
   Destroy,
+  Drop,
+  Safe,
 }
 
 export type EnchantResult = {
@@ -9,7 +10,7 @@ export type EnchantResult = {
   chance: number;
 };
 
-export type EnchantResultMode = "items" | "enchants" | "both";
+export type EnchantResultMode = 'items' | 'enchants' | 'both';
 
 export type FormatEnchantFunction = (index: number) => string;
 

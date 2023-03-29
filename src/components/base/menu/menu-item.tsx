@@ -1,6 +1,6 @@
-import { Link, useLocation } from "react-router-dom";
-import { PropsWithChildren } from "react";
-import cn from "classnames";
+import { Link, useLocation } from 'react-router-dom';
+import { PropsWithChildren } from 'react';
+import cn from 'classnames';
 
 export function MenuItem({
   pathname,
@@ -10,7 +10,7 @@ export function MenuItem({
   const isActive = location.pathname === pathname;
 
   return (
-    <li className={cn("pure-menu-item", { "pure-menu-active": isActive })}>
+    <li className={cn('pure-menu-item', { 'pure-menu-active': isActive })}>
       <Link className="pure-menu-link" to={pathname}>
         {children}
       </Link>

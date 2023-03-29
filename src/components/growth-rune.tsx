@@ -1,7 +1,7 @@
-import { useFormatter } from "../hooks/use-formatter";
-import { useTableRowProps } from "../hooks/use-table-row-props";
-import { Mode } from "../types";
-import { EnchantTable } from "./base/enchant-table";
+import { useFormatter } from '../hooks/use-formatter';
+import { useTableRowProps } from '../hooks/use-table-row-props';
+import { Mode } from '../types';
+import { EnchantTable } from './base/enchant-table';
 
 const chances = [
   [70, 60, 50, 40, 30],
@@ -14,9 +14,9 @@ export function GrowthRune() {
   const tableRows = useTableRowProps({
     chances,
     mode: Mode.Drop,
-    resultMode: "both",
+    resultMode: 'both',
   });
-  const formatEnchant = useFormatter({ startIndex: 2, type: "level" });
+  const formatEnchant = useFormatter({ startIndex: 2, type: 'level' });
   return (
     <EnchantTable
       title="Руна Развития"

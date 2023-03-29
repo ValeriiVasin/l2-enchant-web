@@ -1,16 +1,16 @@
-import { EnchantTable } from "./base/enchant-table";
-import { Mode } from "../types";
-import { useFormatter } from "../hooks/use-formatter";
-import { useTableRowProps } from "../hooks/use-table-row-props";
+import { EnchantTable } from './base/enchant-table';
+import { Mode } from '../types';
+import { useFormatter } from '../hooks/use-formatter';
+import { useTableRowProps } from '../hooks/use-table-row-props';
 
 function BigStones() {
   const chances = [35, 25, 15, 10];
   const tableRows = useTableRowProps({
     chances,
     mode: Mode.Drop,
-    resultMode: "enchants",
+    resultMode: 'enchants',
   });
-  const formatEnchant = useFormatter({ startIndex: 2, type: "level" });
+  const formatEnchant = useFormatter({ startIndex: 2, type: 'level' });
   return (
     <EnchantTable
       title="Большие Камни"
@@ -25,9 +25,9 @@ function SuperiorStones() {
   const tableRows = useTableRowProps({
     chances,
     mode: Mode.Drop,
-    resultMode: "enchants",
+    resultMode: 'enchants',
   });
-  const formatEnchant = useFormatter({ startIndex: 2, type: "level" });
+  const formatEnchant = useFormatter({ startIndex: 2, type: 'level' });
   return (
     <EnchantTable
       title="Исключительные Камни"

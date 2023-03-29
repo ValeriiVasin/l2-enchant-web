@@ -1,9 +1,9 @@
-import { useCallback } from "react";
-import { FormatEnchantFunction } from "../types";
+import { useCallback } from 'react';
+import { FormatEnchantFunction } from '../types';
 
 type UseFormatterOptions = {
   startIndex: number;
-  type: "level" | "plus";
+  type: 'level' | 'plus';
 };
 
 export function useFormatter({
@@ -13,7 +13,7 @@ export function useFormatter({
   return useCallback(
     (index: number) => {
       const adjustedIndex = index + startIndex;
-      return type === "level" ? `Ур.${adjustedIndex}` : `+${adjustedIndex}`;
+      return type === 'level' ? `Ур.${adjustedIndex}` : `+${adjustedIndex}`;
     },
     [startIndex, type],
   );
