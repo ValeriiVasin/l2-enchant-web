@@ -11,3 +11,7 @@ test('strategy: drop', () => {
 test('strategy: destroy', () => {
   expect(calculateEnchant(chances, Mode.Destroy)).toMatchSnapshot();
 });
+
+test('strategy: safe', () => {
+  expect(calculateEnchant(chances, Mode.Safe)).toMatchSnapshot();
+});

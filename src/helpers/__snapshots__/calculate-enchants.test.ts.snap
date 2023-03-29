@@ -39,3 +39,23 @@ exports[`strategy: drop 1`] = `
   },
 ]
 `;
+
+exports[`strategy: safe 1`] = `
+[
+  {
+    "chance": 50,
+    "enchants": 2,
+    "items": 1,
+  },
+  {
+    "chance": 50,
+    "enchants": 4,
+    "items": 1,
+  },
+  {
+    "chance": 50,
+    "enchants": 6,
+    "items": 1,
+  },
+]
+`;
