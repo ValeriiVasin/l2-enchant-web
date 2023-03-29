@@ -14,6 +14,7 @@ export function Menu() {
         <MenuItem pathname="/talisman-of-benir">Талисман Бенира</MenuItem>
         <MenuItem pathname="/stones">Драгоценные Камни</MenuItem>
         <MenuItem pathname="/growth-rune">Руна Развития</MenuItem>
+        <MenuItem pathname="/saiha-cloaks">Плащи Сайхи</MenuItem>
       </ul>
     </div>
   );

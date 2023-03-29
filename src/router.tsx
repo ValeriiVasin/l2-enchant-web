@@ -9,6 +9,7 @@ import { TalismanOfAuthority } from './components/talisman-of-authority';
 import { TalismanOfBenir } from './components/talisman-of-benir';
 import { Stones } from './components/stones';
 import { GrowthRune } from './components/growth-rune';
+import { SaihaCloaks } from './components/saiha-cloaks';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
       { path: '/talisman-of-benir', element: <TalismanOfBenir /> },
       { path: '/stones', element: <Stones /> },
       { path: '/growth-rune', element: <GrowthRune /> },
+      { path: '/saiha-cloaks', element: <SaihaCloaks /> },
     ],
   },
 ]);
