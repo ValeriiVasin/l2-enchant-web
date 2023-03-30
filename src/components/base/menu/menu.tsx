@@ -12,6 +12,7 @@ export function Menu() {
         <MenuItem pathname="/talisman-of-authority">
           Талисман Властителя
         </MenuItem>
+        <MenuItem pathname="/hero-crown">Венец Героя</MenuItem>
         <MenuItem pathname="/talisman-of-benir">Талисман Бенира</MenuItem>
         <MenuItem pathname="/stones">Драгоценные Камни</MenuItem>
         <MenuItem pathname="/growth-rune">Руна Развития</MenuItem>
