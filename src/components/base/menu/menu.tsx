@@ -8,6 +8,7 @@ export function Menu() {
         <MenuItem pathname="/aden">Кристалл Адена</MenuItem>
         <MenuItem pathname="/hardin">Кристалл Хардина</MenuItem>
         <MenuItem pathname="/talisman-of-aden">Талисман Адена</MenuItem>
+        <MenuItem pathname="/talisman-of-eva">Талисман Евы</MenuItem>
         <MenuItem pathname="/talisman-of-authority">
           Талисман Властителя
         </MenuItem>
