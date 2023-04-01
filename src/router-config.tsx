@@ -9,6 +9,7 @@ import { TalismanOfAden } from './components/talisman-of-aden';
 import { TalismanOfAuthority } from './components/talisman-of-authority';
 import { TalismanOfBenir } from './components/talisman-of-benir';
 import { TalismanOfEva } from './components/talisman-of-eva';
+import { TalismanOfMagmeld } from './components/talisman-of-magmeld';
 
 type RouterConfigItem = {
   label: string;
@@ -44,6 +45,11 @@ export const routerConfig: Array<RouterConfigItem> = [
     path: '/talisman-of-benir',
     label: 'Талисман Бенира',
     element: <TalismanOfBenir />,
+  },
+  {
+    path: '/talisman-of-magmeld',
+    label: 'Талисман Магмельда',
+    element: <TalismanOfMagmeld />,
   },
   { path: '/stones', label: 'Драгоценные Камни', element: <Stones /> },
   { path: '/growth-rune', label: 'Руна Развития', element: <GrowthRune /> },
