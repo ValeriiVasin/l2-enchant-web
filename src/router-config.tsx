@@ -5,6 +5,7 @@ import { GrowthRune } from './components/growth-rune';
 import { HeroCrown } from './components/hero-crown';
 import { SaihaCloaks } from './components/saiha-cloaks';
 import { Stones } from './components/stones';
+import { Symbols } from './components/symbols';
 import { TalismanOfAden } from './components/talisman-of-aden';
 import { TalismanOfAuthority } from './components/talisman-of-authority';
 import { TalismanOfBenir } from './components/talisman-of-benir';
@@ -54,4 +55,5 @@ export const routerConfig: Array<RouterConfigItem> = [
   { path: '/stones', label: 'Драгоценные Камни', element: <Stones /> },
   { path: '/growth-rune', label: 'Руна Развития', element: <GrowthRune /> },
   { path: '/saiha-cloaks', label: 'Плащи Сайхи', element: <SaihaCloaks /> },
+  { path: '/symbols', label: 'Узоры', element: <Symbols /> },
 ].sort((a, b) => a.label.localeCompare(b.label));
