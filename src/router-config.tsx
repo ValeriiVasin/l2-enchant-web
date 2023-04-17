@@ -2,6 +2,7 @@ import { Agathions } from './components/agathions';
 import { CrystalAden } from './components/crystal-aden';
 import { CrystalHardin } from './components/crystal-hardin';
 import { DragonBelt } from './components/dragon-belt';
+import { DragonPendant } from './components/dragon-pendant';
 import { GrowthRune } from './components/growth-rune';
 import { HeroCrown } from './components/hero-crown';
 import { SaihaCloaks } from './components/saiha-cloaks';
@@ -58,4 +59,9 @@ export const routerConfig: Array<RouterConfigItem> = [
   { path: '/saiha-cloaks', label: 'Плащи Сайхи', element: <SaihaCloaks /> },
   { path: '/symbols', label: 'Узоры', element: <Symbols /> },
   { path: '/agathions', label: 'Агатионы', element: <Agathions /> },
+  {
+    path: '/dragon-pendant',
+    label: 'Подвеска Дракона',
+    element: <DragonPendant />,
+  },
 ].sort((a, b) => a.label.localeCompare(b.label));
