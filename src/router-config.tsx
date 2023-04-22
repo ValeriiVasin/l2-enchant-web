@@ -1,6 +1,7 @@
 import { Agathions } from './components/agathions';
 import { CrystalAden } from './components/crystal-aden';
 import { CrystalHardin } from './components/crystal-hardin';
+import { DimensionalTalisman } from './components/dimensional-talisman';
 import { DragonBelt } from './components/dragon-belt';
 import { DragonPendant } from './components/dragon-pendant';
 import { GrowthRune } from './components/growth-rune';
@@ -63,5 +64,10 @@ export const routerConfig: Array<RouterConfigItem> = [
     path: '/dragon-pendant',
     label: 'Подвеска Дракона',
     element: <DragonPendant />,
+  },
+  {
+    path: '/dimensional-talisman',
+    label: 'Талисман Иного Измерения',
+    element: <DimensionalTalisman />,
   },
 ].sort((a, b) => a.label.localeCompare(b.label));
