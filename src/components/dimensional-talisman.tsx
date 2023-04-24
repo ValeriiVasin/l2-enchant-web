@@ -3,9 +3,11 @@ import { Mode } from '../types';
 import { calculateEnchant } from '../helpers/calculate-enchant';
 import { toTableRowProps } from '../helpers/to-table-row-props';
 import { useFormatter } from '../hooks/use-formatter';
+import { adjustTablePropsPrice } from '../helpers/adjust-table-props-price';
 
 function BelowSix() {
   const chances = [100, 50, 50, 50, 50];
+  const prices = [2, 10, 10, 10, 20];
   const tableRows = toTableRowProps(
     calculateEnchant(chances, Mode.Safe),
     'enchants',
@@ -16,7 +18,7 @@ function BelowSix() {
   return (
     <EnchantTable
       title="Талисман Иного Измерения"
-      tableRows={tableRows}
+      tableRows={adjustTablePropsPrice(tableRows, prices)}
       formatEnchant={formatEnchant}
     />
   );
@@ -24,6 +26,7 @@ function BelowSix() {
 
 function AboveSix() {
   const chances = [30, 20, 10, 2];
+  const prices = [8, 8, 8, 8];
   const tableRows = toTableRowProps(
     calculateEnchant(chances, Mode.Safe),
     'enchants',
@@ -32,7 +35,7 @@ function AboveSix() {
   return (
     <EnchantTable
       title="Талисман Иного Измерения"
-      tableRows={tableRows}
+      tableRows={adjustTablePropsPrice(tableRows, prices)}
       formatEnchant={formatEnchant}
     />
   );
