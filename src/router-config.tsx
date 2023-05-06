@@ -1,4 +1,5 @@
 import { Agathions } from './components/agathions';
+import { ClanCloak } from './components/clan-cloak';
 import { CrystalAden } from './components/crystal-aden';
 import { CrystalHardin } from './components/crystal-hardin';
 import { DimensionalTalisman } from './components/dimensional-talisman';
@@ -69,5 +70,10 @@ export const routerConfig: Array<RouterConfigItem> = [
     path: '/dimensional-talisman',
     label: 'Талисман Иного Измерения',
     element: <DimensionalTalisman />,
+  },
+  {
+    path: '/clan-cloak',
+    label: 'Плащ Клана',
+    element: <ClanCloak />,
   },
 ].sort((a, b) => a.label.localeCompare(b.label));
