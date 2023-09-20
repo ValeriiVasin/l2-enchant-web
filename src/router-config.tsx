@@ -103,5 +103,7 @@ function isNavItemEnabled(item: RouterConfigItem): boolean {
   }
 
   const now = Date.now();
-  return now > item.enabled.fromDate.getTime();
+  return (
+    now > item.enabled.fromDate.getTime() && now < item.enabled.toDate.getTime()
+  );
 }
