@@ -5,6 +5,7 @@ import { CrystalHardin } from './components/crystal-hardin';
 import { DimensionalTalisman } from './components/dimensional-talisman';
 import { DragonBelt } from './components/dragon-belt';
 import { DragonPendant } from './components/dragon-pendant';
+import { EventFrozenCanyon } from './components/event-frozen-canyon';
 import { GrowthRune } from './components/growth-rune';
 import { HeroCrown } from './components/hero-crown';
 import { SaihaCloaks } from './components/saiha-cloaks';
@@ -17,6 +18,9 @@ import { TalismanOfEva } from './components/talisman-of-eva';
 import { TalismanOfMagmeld } from './components/talisman-of-magmeld';
 
 type RouterConfigItem = {
+  // control item presence
+  // `toDate` should always be next day after event end date
+  enabled?: boolean | { fromDate: Date; toDate: Date };
   label: string;
   path: string;
   element: JSX.Element;
@@ -76,4 +80,28 @@ export const routerConfig: Array<RouterConfigItem> = [
     label: 'Плащ Клана',
     element: <ClanCloak />,
   },
-].sort((a, b) => a.label.localeCompare(b.label));
+  {
+    path: '/event-frozen-canyon',
+    enabled: {
+      fromDate: new Date('2023-09-20T10:00:00.00+03:00'),
+      toDate: new Date('2023-10-04T10:00:00.00+03:00'),
+    },
+    label: 'Ивент: Замерзший Каньон',
+    element: <EventFrozenCanyon />,
+  },
+]
+  .filter(isNavItemEnabled)
+  .sort((a, b) => a.label.localeCompare(b.label));
+
+function isNavItemEnabled(item: RouterConfigItem): boolean {
+  if (typeof item.enabled === 'undefined') {
+    return true;
+  }
+
+  if (typeof item.enabled === 'boolean') {
+    return item.enabled;
+  }
+
+  const now = Date.now();
+  return now > item.enabled.fromDate.getTime();
+}
