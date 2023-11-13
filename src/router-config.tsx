@@ -8,6 +8,7 @@ import { DragonPendant } from './components/dragon-pendant';
 import { EventFrozenCanyon } from './components/event-frozen-canyon';
 import { GrowthRune } from './components/growth-rune';
 import { HeroCrown } from './components/hero-crown';
+import { HunterEarring } from './components/hunter-earring';
 import { SaihaCloaks } from './components/saiha-cloaks';
 import { Stones } from './components/stones';
 import { Symbols } from './components/symbols';
@@ -88,6 +89,11 @@ export const routerConfig: Array<RouterConfigItem> = [
     },
     label: 'Ивент: Замерзший Каньон',
     element: <EventFrozenCanyon />,
+  },
+  {
+    path: '/hunter-earring',
+    label: 'Серьга Охотника',
+    element: <HunterEarring />,
   },
 ]
   .filter(isNavItemEnabled)
