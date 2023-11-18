@@ -8,7 +8,6 @@ import { SaihaCloaks } from './components/saiha-cloaks';
 import { Symbols } from './components/symbols';
 import { TalismanOfAden } from './components/talisman-of-aden';
 import { TalismanOfAuthority } from './components/talisman-of-authority';
-import { TalismanOfMagmeld } from './components/talisman-of-magmeld';
 import { RouterConfigItem } from './types';
 import { eventFronzenCanyon } from './enchants/event-frozen-canyon';
 import { clanCloak } from './enchants/clan-cloak';
@@ -19,6 +18,7 @@ import { talismanOfEva } from './enchants/talisman-of-eva';
 import { talismanOfBenir } from './enchants/talisman-of-benir';
 import { growthRune } from './enchants/growth-rune';
 import { dragonPendant } from './enchants/dragon-pendant';
+import { talismanOfMagmeld } from './enchants/talisman-of-magmeld';
 
 type Route = {
   path: string;
@@ -38,6 +38,7 @@ export const routerConfig = [
     talismanOfBenir,
     growthRune,
     dragonPendant,
+    talismanOfMagmeld,
   ]),
   { path: '/dragon', label: 'Пояс Дракона', element: <DragonBelt /> },
   {
@@ -51,11 +52,6 @@ export const routerConfig = [
     element: <TalismanOfAuthority />,
   },
   { path: '/hero-crown', label: 'Венец Героя', element: <HeroCrown /> },
-  {
-    path: '/talisman-of-magmeld',
-    label: 'Талисман Магмельда',
-    element: <TalismanOfMagmeld />,
-  },
   { path: '/saiha-cloaks', label: 'Плащи Сайхи', element: <SaihaCloaks /> },
   { path: '/symbols', label: 'Узоры', element: <Symbols /> },
   {
