@@ -1,7 +1,6 @@
 import { agathions } from './enchants/agathions';
 import { PageContent } from './components/base/page-content';
 
-import { CrystalAden } from './components/crystal-aden';
 import { CrystalHardin } from './components/crystal-hardin';
 import { DimensionalTalisman } from './components/dimensional-talisman';
 import { DragonBelt } from './components/dragon-belt';
@@ -20,6 +19,7 @@ import { RouterConfigItem } from './types';
 import { eventFronzenCanyon } from './enchants/event-frozen-canyon';
 import { clanCloak } from './enchants/clan-cloak';
 import { stones } from './enchants/stones';
+import { crystalAden } from './enchants/crystal-aden';
 
 type Route = {
   path: string;
@@ -28,13 +28,14 @@ type Route = {
 };
 
 export const routerConfig = [
-  ...createRouterConfig([agathions, eventFronzenCanyon, clanCloak, stones]),
+  ...createRouterConfig([
+    agathions,
+    eventFronzenCanyon,
+    clanCloak,
+    stones,
+    crystalAden,
+  ]),
   { path: '/dragon', label: 'Пояс Дракона', element: <DragonBelt /> },
-  {
-    path: '/aden',
-    label: 'Кристалл Адена',
-    element: <CrystalAden />,
-  },
   { path: '/hardin', label: 'Кристалл Хардина', element: <CrystalHardin /> },
   {
     path: '/talisman-of-aden',
