@@ -1,7 +1,6 @@
 import { agathions } from './enchants/agathions';
 import { PageContent } from './components/base/page-content';
 import { DimensionalTalisman } from './components/dimensional-talisman';
-import { DragonBelt } from './components/dragon-belt';
 import { HeroCrown } from './components/hero-crown';
 import { HunterEarring } from './components/hunter-earring';
 import { SaihaCloaks } from './components/saiha-cloaks';
@@ -19,6 +18,7 @@ import { growthRune } from './enchants/growth-rune';
 import { dragonPendant } from './enchants/dragon-pendant';
 import { talismanOfMagmeld } from './enchants/talisman-of-magmeld';
 import { talismanOfAuthority } from './enchants/talisman-of-authority';
+import { dragonBelt } from './enchants/dragon-belt';
 
 type Route = {
   path: string;
@@ -40,8 +40,8 @@ export const routerConfig = [
     dragonPendant,
     talismanOfMagmeld,
     talismanOfAuthority,
+    dragonBelt,
   ]),
-  { path: '/dragon', label: 'Пояс Дракона', element: <DragonBelt /> },
   {
     path: '/talisman-of-aden',
     label: 'Талисман Адена',
