@@ -1,7 +1,6 @@
 import { agathions } from './enchants/agathions';
 import { PageContent } from './components/base/page-content';
 import { DimensionalTalisman } from './components/dimensional-talisman';
-import { HunterEarring } from './components/hunter-earring';
 import { SaihaCloaks } from './components/saiha-cloaks';
 import { TalismanOfAden } from './components/talisman-of-aden';
 import { RouterConfigItem } from './types';
@@ -19,6 +18,7 @@ import { talismanOfAuthority } from './enchants/talisman-of-authority';
 import { dragonBelt } from './enchants/dragon-belt';
 import { symbols } from './enchants/symbols';
 import { heroCrown } from './enchants/hero-crown';
+import { hunterEarring } from './enchants/hunter-earring';
 
 type Route = {
   path: string;
@@ -43,6 +43,7 @@ export const routerConfig = [
     dragonBelt,
     symbols,
     heroCrown,
+    hunterEarring,
   ]),
   {
     path: '/talisman-of-aden',
@@ -54,11 +55,6 @@ export const routerConfig = [
     path: '/dimensional-talisman',
     label: 'Талисман Иного Измерения',
     element: <DimensionalTalisman />,
-  },
-  {
-    path: '/hunter-earring',
-    label: 'Серьга Охотника',
-    element: <HunterEarring />,
   },
 ].sort((a, b) => a.label.localeCompare(b.label));
 
