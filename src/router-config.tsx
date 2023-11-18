@@ -2,7 +2,6 @@ import { agathions } from './enchants/agathions';
 import { PageContent } from './components/base/page-content';
 import { DimensionalTalisman } from './components/dimensional-talisman';
 import { SaihaCloaks } from './components/saiha-cloaks';
-import { TalismanOfAden } from './components/talisman-of-aden';
 import { RouterConfigItem } from './types';
 import { eventFronzenCanyon } from './enchants/event-frozen-canyon';
 import { clanCloak } from './enchants/clan-cloak';
@@ -19,6 +18,7 @@ import { dragonBelt } from './enchants/dragon-belt';
 import { symbols } from './enchants/symbols';
 import { heroCrown } from './enchants/hero-crown';
 import { hunterEarring } from './enchants/hunter-earring';
+import { talismanOfAden } from './enchants/talisman-of-aden';
 
 type Route = {
   path: string;
@@ -44,12 +44,8 @@ export const routerConfig = [
     symbols,
     heroCrown,
     hunterEarring,
+    talismanOfAden,
   ]),
-  {
-    path: '/talisman-of-aden',
-    label: 'Талисман Адена',
-    element: <TalismanOfAden />,
-  },
   { path: '/saiha-cloaks', label: 'Плащи Сайхи', element: <SaihaCloaks /> },
   {
     path: '/dimensional-talisman',
