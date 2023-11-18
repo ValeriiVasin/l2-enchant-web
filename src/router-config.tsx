@@ -4,7 +4,6 @@ import { DimensionalTalisman } from './components/dimensional-talisman';
 import { HeroCrown } from './components/hero-crown';
 import { HunterEarring } from './components/hunter-earring';
 import { SaihaCloaks } from './components/saiha-cloaks';
-import { Symbols } from './components/symbols';
 import { TalismanOfAden } from './components/talisman-of-aden';
 import { RouterConfigItem } from './types';
 import { eventFronzenCanyon } from './enchants/event-frozen-canyon';
@@ -19,6 +18,7 @@ import { dragonPendant } from './enchants/dragon-pendant';
 import { talismanOfMagmeld } from './enchants/talisman-of-magmeld';
 import { talismanOfAuthority } from './enchants/talisman-of-authority';
 import { dragonBelt } from './enchants/dragon-belt';
+import { symbols } from './enchants/symbols';
 
 type Route = {
   path: string;
@@ -41,6 +41,7 @@ export const routerConfig = [
     talismanOfMagmeld,
     talismanOfAuthority,
     dragonBelt,
+    symbols,
   ]),
   {
     path: '/talisman-of-aden',
@@ -49,7 +50,6 @@ export const routerConfig = [
   },
   { path: '/hero-crown', label: 'Венец Героя', element: <HeroCrown /> },
   { path: '/saiha-cloaks', label: 'Плащи Сайхи', element: <SaihaCloaks /> },
-  { path: '/symbols', label: 'Узоры', element: <Symbols /> },
   {
     path: '/dimensional-talisman',
     label: 'Талисман Иного Измерения',
