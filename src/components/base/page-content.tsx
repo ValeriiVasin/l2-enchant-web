@@ -3,7 +3,7 @@ import { useTableRowProps } from '../../hooks/use-table-row-props';
 import { EnchantConfig } from '../../types';
 import { EnchantTable } from './enchant-table';
 
-export type PageContentProps = {
+type PageContentProps = {
   config: EnchantConfig | Array<EnchantConfig>;
 };
 
