@@ -2,14 +2,14 @@ import { EnchantResult, Mode } from '../types';
 
 export function calculateEnchant(
   chances: number[],
-  mode = Mode.Drop,
+  mode: Mode,
 ): Array<EnchantResult> {
   switch (mode) {
-    case Mode.Destroy:
+    case 'destroy':
       return convertStrategyResult(modeDestroy(chances));
-    case Mode.Safe:
+    case 'safe':
       return convertStrategyResult(modeSafe(chances));
-    case Mode.Drop:
+    case 'drop':
       return convertStrategyResult(modeDrop(chances));
   }
 }

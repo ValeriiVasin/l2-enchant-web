@@ -1,6 +1,5 @@
 import { useFormatter } from '../hooks/use-formatter';
 import { useTableRowProps } from '../hooks/use-table-row-props';
-import { Mode } from '../types';
 import { EnchantTable } from './base/enchant-table';
 
 function CrystalAdenWeapon() {
@@ -12,7 +11,7 @@ function CrystalAdenWeapon() {
   ];
   const tableRows = useTableRowProps({
     chances,
-    mode: Mode.Drop,
+    mode: 'drop',
     resultMode: 'both',
   });
   const formatEnchant = useFormatter({ type: 'level', startIndex: 2 });
@@ -34,7 +33,7 @@ function CrystalAdenArmor() {
   ];
   const tableRows = useTableRowProps({
     chances,
-    mode: Mode.Drop,
+    mode: 'drop',
     resultMode: 'both',
   });
   const formatEnchant = useFormatter({ type: 'level', startIndex: 2 });

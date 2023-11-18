@@ -1,6 +1,5 @@
 import { useFormatter } from '../hooks/use-formatter';
 import { useTableRowProps } from '../hooks/use-table-row-props';
-import { Mode } from '../types';
 import { EnchantTable } from './base/enchant-table';
 
 const chances: Array<Array<number>> = [
@@ -13,7 +12,7 @@ const chances: Array<Array<number>> = [
 export function TalismanOfAuthority() {
   const tableRows = useTableRowProps({
     chances,
-    mode: Mode.Drop,
+    mode: 'drop',
     resultMode: 'both',
   });
   const formatEnchant = useFormatter({ startIndex: 2, type: 'level' });
