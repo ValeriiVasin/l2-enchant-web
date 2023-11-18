@@ -1,9 +1,9 @@
 import { EnchantTable } from './base/enchant-table';
-import { Mode, TableRowProps } from '../types';
 import { calculateEnchant } from '../helpers/calculate-enchant';
 import { toTableRowProps } from '../helpers/to-table-row-props';
 import { useFormatter } from '../hooks/use-formatter';
 import { adjustTablePropsPrice } from '../helpers/adjust-table-props-price';
+import { TableRowProps } from '../types';
 
 function prepareRows(): Array<TableRowProps> {
   const chances = [100, 50, 50, 50, 50, 100, 30, 20, 10, 2];

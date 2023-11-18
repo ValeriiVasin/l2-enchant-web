@@ -1,6 +1,5 @@
 import { useFormatter } from '../hooks/use-formatter';
 import { useTableRowProps } from '../hooks/use-table-row-props';
-import { Mode } from '../types';
 import { EnchantTable } from './base/enchant-table';
 
 function CloakLow() {

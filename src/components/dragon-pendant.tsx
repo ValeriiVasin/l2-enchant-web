@@ -1,5 +1,4 @@
 import { EnchantTable } from './base/enchant-table';
-import { Mode } from '../types';
 import { useFormatter } from '../hooks/use-formatter';
 import { useTableRowProps } from '../hooks/use-table-row-props';
 import { useMemo } from 'react';

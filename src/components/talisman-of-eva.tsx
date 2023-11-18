@@ -1,5 +1,4 @@
 import { EnchantTable } from './base/enchant-table';
-import { Mode } from '../types';
 import { calculateEnchant } from '../helpers/calculate-enchant';
 import { toTableRowProps } from '../helpers/to-table-row-props';
 import { useFormatter } from '../hooks/use-formatter';
