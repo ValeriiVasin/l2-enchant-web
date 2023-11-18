@@ -10,7 +10,6 @@ import { SaihaCloaks } from './components/saiha-cloaks';
 import { Symbols } from './components/symbols';
 import { TalismanOfAden } from './components/talisman-of-aden';
 import { TalismanOfAuthority } from './components/talisman-of-authority';
-import { TalismanOfBenir } from './components/talisman-of-benir';
 import { TalismanOfMagmeld } from './components/talisman-of-magmeld';
 import { RouterConfigItem } from './types';
 import { eventFronzenCanyon } from './enchants/event-frozen-canyon';
@@ -19,6 +18,7 @@ import { stones } from './enchants/stones';
 import { crystalAden } from './enchants/crystal-aden';
 import { crystalHardin } from './enchants/crystal-hardin';
 import { talismanOfEva } from './enchants/talisman-of-eva';
+import { talismanOfBenir } from './enchants/talisman-of-benir';
 
 type Route = {
   path: string;
@@ -35,6 +35,7 @@ export const routerConfig = [
     crystalAden,
     crystalHardin,
     talismanOfEva,
+    talismanOfBenir,
   ]),
   { path: '/dragon', label: 'Пояс Дракона', element: <DragonBelt /> },
   {
@@ -48,11 +49,6 @@ export const routerConfig = [
     element: <TalismanOfAuthority />,
   },
   { path: '/hero-crown', label: 'Венец Героя', element: <HeroCrown /> },
-  {
-    path: '/talisman-of-benir',
-    label: 'Талисман Бенира',
-    element: <TalismanOfBenir />,
-  },
   {
     path: '/talisman-of-magmeld',
     label: 'Талисман Магмельда',
