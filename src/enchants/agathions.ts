@@ -8,7 +8,7 @@ export const agathions: RouterConfigItem = {
     chances: [100, 100, 100, 65, 50, 35, 24, 18, 14, 8],
     mode: 'destroy',
     resultMode: 'items',
-    startIndex: 1,
     type: 'plus',
+    startIndex: 1,
   },
 };

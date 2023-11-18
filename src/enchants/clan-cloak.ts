@@ -11,16 +11,16 @@ export const clanCloak: RouterConfigItem = {
       chances,
       mode: 'destroy',
       resultMode: 'items',
-      startIndex: 1,
       type: 'plus',
+      startIndex: 1,
     },
     {
       title: 'Плащ Клана (Заточки)',
       chances,
       mode: 'destroy',
       resultMode: 'enchants',
-      startIndex: 1,
       type: 'plus',
+      startIndex: 1,
     },
   ],
 };

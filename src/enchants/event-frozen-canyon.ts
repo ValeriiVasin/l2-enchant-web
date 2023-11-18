@@ -13,7 +13,7 @@ export const eventFronzenCanyon: RouterConfigItem = {
     chances: [8, 7, 6, 5, 4, 2, 1.3, 1, 0.3, 0.07, 0.04, 0.04, 0.03, 0.01],
     mode: 'safe',
     resultMode: 'enchants',
-    startIndex: 2,
     type: 'level',
+    startIndex: 2,
   },
 };

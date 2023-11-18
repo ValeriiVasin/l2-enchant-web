@@ -9,16 +9,16 @@ export const stones: RouterConfigItem = {
       chances: [35, 25, 15, 10],
       mode: 'drop',
       resultMode: 'enchants',
-      startIndex: 2,
       type: 'level',
+      startIndex: 2,
     },
     {
       title: 'Исключительные Камни',
       chances: [30, 30, 20, 10],
       mode: 'drop',
       resultMode: 'enchants',
-      startIndex: 2,
       type: 'level',
+      startIndex: 2,
     },
   ],
 };

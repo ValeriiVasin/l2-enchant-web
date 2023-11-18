@@ -8,7 +8,7 @@ export const talismanOfEva: RouterConfigItem = {
     chances: [60, 50, 40, 35, 30, 28, 26, 24, 22, 20],
     mode: 'destroy',
     resultMode: 'items',
-    startIndex: 1,
     type: 'plus',
+    startIndex: 1,
   },
 };
