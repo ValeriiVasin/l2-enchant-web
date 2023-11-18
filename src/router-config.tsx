@@ -1,6 +1,5 @@
 import { agathions } from './enchants/agathions';
 import { PageContent } from './components/base/page-content';
-
 import { DimensionalTalisman } from './components/dimensional-talisman';
 import { DragonBelt } from './components/dragon-belt';
 import { DragonPendant } from './components/dragon-pendant';
@@ -12,7 +11,6 @@ import { Symbols } from './components/symbols';
 import { TalismanOfAden } from './components/talisman-of-aden';
 import { TalismanOfAuthority } from './components/talisman-of-authority';
 import { TalismanOfBenir } from './components/talisman-of-benir';
-import { TalismanOfEva } from './components/talisman-of-eva';
 import { TalismanOfMagmeld } from './components/talisman-of-magmeld';
 import { RouterConfigItem } from './types';
 import { eventFronzenCanyon } from './enchants/event-frozen-canyon';
@@ -20,6 +18,7 @@ import { clanCloak } from './enchants/clan-cloak';
 import { stones } from './enchants/stones';
 import { crystalAden } from './enchants/crystal-aden';
 import { crystalHardin } from './enchants/crystal-hardin';
+import { talismanOfEva } from './enchants/talisman-of-eva';
 
 type Route = {
   path: string;
@@ -35,17 +34,13 @@ export const routerConfig = [
     stones,
     crystalAden,
     crystalHardin,
+    talismanOfEva,
   ]),
   { path: '/dragon', label: 'Пояс Дракона', element: <DragonBelt /> },
   {
     path: '/talisman-of-aden',
     label: 'Талисман Адена',
     element: <TalismanOfAden />,
-  },
-  {
-    path: '/talisman-of-eva',
-    label: 'Талисман Евы',
-    element: <TalismanOfEva />,
   },
   {
     path: '/talisman-of-authority',
