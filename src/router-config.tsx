@@ -10,7 +10,6 @@ import { GrowthRune } from './components/growth-rune';
 import { HeroCrown } from './components/hero-crown';
 import { HunterEarring } from './components/hunter-earring';
 import { SaihaCloaks } from './components/saiha-cloaks';
-import { Stones } from './components/stones';
 import { Symbols } from './components/symbols';
 import { TalismanOfAden } from './components/talisman-of-aden';
 import { TalismanOfAuthority } from './components/talisman-of-authority';
@@ -20,6 +19,7 @@ import { TalismanOfMagmeld } from './components/talisman-of-magmeld';
 import { RouterConfigItem } from './types';
 import { eventFronzenCanyon } from './enchants/event-frozen-canyon';
 import { clanCloak } from './enchants/clan-cloak';
+import { stones } from './enchants/stones';
 
 type Route = {
   path: string;
@@ -28,7 +28,7 @@ type Route = {
 };
 
 export const routerConfig = [
-  ...createRouterConfig([agathions, eventFronzenCanyon, clanCloak]),
+  ...createRouterConfig([agathions, eventFronzenCanyon, clanCloak, stones]),
   { path: '/dragon', label: 'Пояс Дракона', element: <DragonBelt /> },
   {
     path: '/aden',
@@ -62,7 +62,6 @@ export const routerConfig = [
     label: 'Талисман Магмельда',
     element: <TalismanOfMagmeld />,
   },
-  { path: '/stones', label: 'Драгоценные Камни', element: <Stones /> },
   { path: '/growth-rune', label: 'Руна Развития', element: <GrowthRune /> },
   { path: '/saiha-cloaks', label: 'Плащи Сайхи', element: <SaihaCloaks /> },
   { path: '/symbols', label: 'Узоры', element: <Symbols /> },
