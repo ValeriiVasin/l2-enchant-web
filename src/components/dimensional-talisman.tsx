@@ -10,7 +10,7 @@ function prepareRows(): Array<TableRowProps> {
   const prices = [2, 10, 10, 10, 20, 0, 8, 8, 8, 8];
 
   const tableRows = adjustTablePropsPrice(
-    toTableRowProps(calculateEnchant(chances, Mode.Safe), 'enchants'),
+    toTableRowProps(calculateEnchant(chances, 'safe'), 'enchants'),
     prices,
   );
 

@@ -7,7 +7,7 @@ function CloakLow() {
   const chances = [95, 85, 75, 60, 55, 40, 30, 20];
   const tableRows = useTableRowProps({
     chances,
-    mode: Mode.Safe,
+    mode: 'safe',
     resultMode: 'enchants',
   });
   const formatEnchant = useFormatter({ startIndex: 1, type: 'plus' });
@@ -24,7 +24,7 @@ function CloakHigh() {
   const chances = [10, 1];
   const tableRows = useTableRowProps({
     chances,
-    mode: Mode.Safe,
+    mode: 'safe',
     resultMode: 'enchants',
   });
   const formatEnchant = useFormatter({ startIndex: 9, type: 'plus' });
@@ -41,7 +41,7 @@ function SpecialCloak() {
   const chances = [70, 60, 50, 40, 30, 20, 10, 5, 3, 2];
   const tableRows = useTableRowProps({
     chances,
-    mode: Mode.Safe,
+    mode: 'safe',
     resultMode: 'enchants',
   });
   const formatEnchant = useFormatter({ startIndex: 1, type: 'plus' });

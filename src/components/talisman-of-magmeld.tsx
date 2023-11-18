@@ -14,7 +14,7 @@ const chances: Array<Array<number>> = [
 export function TalismanOfMagmeld() {
   const tableRows = useTableRowProps({
     chances,
-    mode: Mode.Drop,
+    mode: 'drop',
     resultMode: 'enchants',
   });
   const formatEnchant = useFormatter({ startIndex: 2, type: 'level' });

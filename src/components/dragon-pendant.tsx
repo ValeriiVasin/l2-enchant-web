@@ -10,7 +10,7 @@ function useTableRowPropsWrapper(chances: Array<number>) {
       // eslint-disable-next-line react-hooks/rules-of-hooks
       useTableRowProps({
         chances,
-        mode: Mode.Drop,
+        mode: 'drop',
         resultMode: 'enchants',
       }),
     [chances],

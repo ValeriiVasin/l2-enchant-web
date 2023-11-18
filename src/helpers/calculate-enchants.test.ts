@@ -5,13 +5,13 @@ import { calculateEnchant } from './calculate-enchant';
 const chances = [50, 50, 50];
 
 test('strategy: drop', () => {
-  expect(calculateEnchant(chances, Mode.Drop)).toMatchSnapshot();
+  expect(calculateEnchant(chances, 'drop')).toMatchSnapshot();
 });
 
 test('strategy: destroy', () => {
-  expect(calculateEnchant(chances, Mode.Destroy)).toMatchSnapshot();
+  expect(calculateEnchant(chances, 'destroy')).toMatchSnapshot();
 });
 
 test('strategy: safe', () => {
-  expect(calculateEnchant(chances, Mode.Safe)).toMatchSnapshot();
+  expect(calculateEnchant(chances, 'safe')).toMatchSnapshot();
 });

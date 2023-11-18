@@ -1,8 +1,13 @@
-export enum Mode {
-  Destroy,
-  Drop,
-  Safe,
-}
+export type Mode =
+  // item destroys when enchant fails
+  // Example: Dragon Belt / "Пояс Дракона"
+  | 'destroy'
+  // item drops to the safe level when enchant fails
+  // example: "Talisman of Authority" / "Талисман Властителя"
+  | 'drop'
+  // when enchant fails - items stays, only enchant schroll is a price
+  // example: "Dimensional Talisman" / "Талисман Иного Измерения"
+  | 'safe';
 
 export type EnchantResult = {
   items: number;

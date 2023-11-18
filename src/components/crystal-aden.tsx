@@ -12,7 +12,7 @@ function CrystalAdenWeapon() {
   ];
   const tableRows = useTableRowProps({
     chances,
-    mode: Mode.Drop,
+    mode: 'drop',
     resultMode: 'both',
   });
   const formatEnchant = useFormatter({ type: 'level', startIndex: 2 });
@@ -34,7 +34,7 @@ function CrystalAdenArmor() {
   ];
   const tableRows = useTableRowProps({
     chances,
-    mode: Mode.Drop,
+    mode: 'drop',
     resultMode: 'both',
   });
   const formatEnchant = useFormatter({ type: 'level', startIndex: 2 });

@@ -13,7 +13,7 @@ const chances = [
 export function GrowthRune() {
   const tableRows = useTableRowProps({
     chances,
-    mode: Mode.Drop,
+    mode: 'drop',
     resultMode: 'both',
   });
   const formatEnchant = useFormatter({ startIndex: 2, type: 'level' });

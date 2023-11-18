@@ -1,11 +1,11 @@
-import { EnchantResult, Mode } from '../types';
+import { EnchantResult } from '../types';
 import { calculateEnchant } from './calculate-enchant';
 
 export function unwrapSafeDrops(
   chanceGroups: Array<Array<number>>,
 ): Array<EnchantResult> {
   const resultGroups = chanceGroups.map((group) =>
-    calculateEnchant(group, Mode.Drop),
+    calculateEnchant(group, 'drop'),
   );
 
   for (let i = 1; i < resultGroups.length; i++) {
