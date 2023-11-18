@@ -2,11 +2,11 @@ import { useMemo } from 'react';
 import { calculateEnchant } from '../helpers/calculate-enchant';
 import { toTableRowProps } from '../helpers/to-table-row-props';
 import { unwrapSafeDrops } from '../helpers/unwrap-safe-drops';
-import { EnchantResultMode, Mode, TableRowProps } from '../types';
+import { EnchantResultMode, EnchantMode, TableRowProps } from '../types';
 
 type UseTableRowPropsOptions = {
   chances: Array<number> | Array<Array<number>>;
-  mode: Mode;
+  mode: EnchantMode;
   resultMode: EnchantResultMode;
 };
 

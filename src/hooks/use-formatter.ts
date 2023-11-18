@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
 import { FormatEnchantFunction } from '../types';
 
-type UseFormatterOptions = {
+export type UseFormatterOptions = {
   startIndex: number;
   type: 'level' | 'plus';
 };

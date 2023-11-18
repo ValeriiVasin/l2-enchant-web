@@ -1,11 +1,11 @@
-import { Agathions } from './components/agathions';
+import { agathions } from './enchants/agathions';
+import { PageContent } from './components/base/page-content';
 import { ClanCloak } from './components/clan-cloak';
 import { CrystalAden } from './components/crystal-aden';
 import { CrystalHardin } from './components/crystal-hardin';
 import { DimensionalTalisman } from './components/dimensional-talisman';
 import { DragonBelt } from './components/dragon-belt';
 import { DragonPendant } from './components/dragon-pendant';
-import { EventFrozenCanyon } from './components/event-frozen-canyon';
 import { GrowthRune } from './components/growth-rune';
 import { HeroCrown } from './components/hero-crown';
 import { HunterEarring } from './components/hunter-earring';
@@ -17,17 +17,17 @@ import { TalismanOfAuthority } from './components/talisman-of-authority';
 import { TalismanOfBenir } from './components/talisman-of-benir';
 import { TalismanOfEva } from './components/talisman-of-eva';
 import { TalismanOfMagmeld } from './components/talisman-of-magmeld';
+import { RouterConfigItem } from './types';
+import { eventFronzenCanyon } from './enchants/event-frozen-canyon';
 
-type RouterConfigItem = {
-  // control item presence
-  // `toDate` should always be next day after event end date
-  enabled?: boolean | { fromDate: Date; toDate: Date };
-  label: string;
+type Route = {
   path: string;
+  label: string;
   element: JSX.Element;
 };
 
-export const routerConfig: Array<RouterConfigItem> = [
+export const routerConfig = [
+  ...createRouterConfig([agathions, eventFronzenCanyon]),
   { path: '/dragon', label: 'Пояс Дракона', element: <DragonBelt /> },
   {
     path: '/aden',
@@ -65,7 +65,6 @@ export const routerConfig: Array<RouterConfigItem> = [
   { path: '/growth-rune', label: 'Руна Развития', element: <GrowthRune /> },
   { path: '/saiha-cloaks', label: 'Плащи Сайхи', element: <SaihaCloaks /> },
   { path: '/symbols', label: 'Узоры', element: <Symbols /> },
-  { path: '/agathions', label: 'Агатионы', element: <Agathions /> },
   {
     path: '/dragon-pendant',
     label: 'Подвеска Дракона',
@@ -82,34 +81,38 @@ export const routerConfig: Array<RouterConfigItem> = [
     element: <ClanCloak />,
   },
   {
-    path: '/event-frozen-canyon',
-    enabled: {
-      fromDate: new Date('2023-09-20T10:00:00.00+03:00'),
-      toDate: new Date('2023-10-04T10:00:00.00+03:00'),
-    },
-    label: 'Ивент: Замерзший Каньон',
-    element: <EventFrozenCanyon />,
-  },
-  {
     path: '/hunter-earring',
     label: 'Серьга Охотника',
     element: <HunterEarring />,
   },
-]
-  .filter(isNavItemEnabled)
-  .sort((a, b) => a.label.localeCompare(b.label));
+].sort((a, b) => a.label.localeCompare(b.label));
 
-function isNavItemEnabled(item: RouterConfigItem): boolean {
-  if (typeof item.enabled === 'undefined') {
+function isNavItemEnabled(condition: RouterConfigItem['enabled']): boolean {
+  if (typeof condition === 'undefined') {
     return true;
   }
 
-  if (typeof item.enabled === 'boolean') {
-    return item.enabled;
+  if (typeof condition === 'boolean') {
+    return condition;
   }
 
   const now = Date.now();
-  return (
-    now > item.enabled.fromDate.getTime() && now < item.enabled.toDate.getTime()
-  );
+  return now > condition.fromDate.getTime() && now < condition.toDate.getTime();
+}
+
+function toRoute(item: RouterConfigItem): Route | null {
+  if (!isNavItemEnabled(item.enabled)) {
+    return null;
+  }
+
+  const { path, label, config } = item;
+
+  return { path, label, element: <PageContent config={config} /> };
+}
+
+function createRouterConfig(items: Array<RouterConfigItem>): Array<Route> {
+  return items
+    .map(toRoute)
+    .filter((item): item is Route => item !== null)
+    .sort((a, b) => a.label.localeCompare(b.label));
 }
