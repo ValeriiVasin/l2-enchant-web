@@ -7,7 +7,6 @@ import { HunterEarring } from './components/hunter-earring';
 import { SaihaCloaks } from './components/saiha-cloaks';
 import { Symbols } from './components/symbols';
 import { TalismanOfAden } from './components/talisman-of-aden';
-import { TalismanOfAuthority } from './components/talisman-of-authority';
 import { RouterConfigItem } from './types';
 import { eventFronzenCanyon } from './enchants/event-frozen-canyon';
 import { clanCloak } from './enchants/clan-cloak';
@@ -19,6 +18,7 @@ import { talismanOfBenir } from './enchants/talisman-of-benir';
 import { growthRune } from './enchants/growth-rune';
 import { dragonPendant } from './enchants/dragon-pendant';
 import { talismanOfMagmeld } from './enchants/talisman-of-magmeld';
+import { talismanOfAuthority } from './enchants/talisman-of-authority';
 
 type Route = {
   path: string;
@@ -39,17 +39,13 @@ export const routerConfig = [
     growthRune,
     dragonPendant,
     talismanOfMagmeld,
+    talismanOfAuthority,
   ]),
   { path: '/dragon', label: 'Пояс Дракона', element: <DragonBelt /> },
   {
     path: '/talisman-of-aden',
     label: 'Талисман Адена',
     element: <TalismanOfAden />,
-  },
-  {
-    path: '/talisman-of-authority',
-    label: 'Талисман Властителя',
-    element: <TalismanOfAuthority />,
   },
   { path: '/hero-crown', label: 'Венец Героя', element: <HeroCrown /> },
   { path: '/saiha-cloaks', label: 'Плащи Сайхи', element: <SaihaCloaks /> },
