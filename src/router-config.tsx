@@ -2,7 +2,6 @@ import { agathions } from './enchants/agathions';
 import { PageContent } from './components/base/page-content';
 import { DimensionalTalisman } from './components/dimensional-talisman';
 import { DragonBelt } from './components/dragon-belt';
-import { DragonPendant } from './components/dragon-pendant';
 import { HeroCrown } from './components/hero-crown';
 import { HunterEarring } from './components/hunter-earring';
 import { SaihaCloaks } from './components/saiha-cloaks';
@@ -19,6 +18,7 @@ import { crystalHardin } from './enchants/crystal-hardin';
 import { talismanOfEva } from './enchants/talisman-of-eva';
 import { talismanOfBenir } from './enchants/talisman-of-benir';
 import { growthRune } from './enchants/growth-rune';
+import { dragonPendant } from './enchants/dragon-pendant';
 
 type Route = {
   path: string;
@@ -37,6 +37,7 @@ export const routerConfig = [
     talismanOfEva,
     talismanOfBenir,
     growthRune,
+    dragonPendant,
   ]),
   { path: '/dragon', label: 'Пояс Дракона', element: <DragonBelt /> },
   {
@@ -57,11 +58,6 @@ export const routerConfig = [
   },
   { path: '/saiha-cloaks', label: 'Плащи Сайхи', element: <SaihaCloaks /> },
   { path: '/symbols', label: 'Узоры', element: <Symbols /> },
-  {
-    path: '/dragon-pendant',
-    label: 'Подвеска Дракона',
-    element: <DragonPendant />,
-  },
   {
     path: '/dimensional-talisman',
     label: 'Талисман Иного Измерения',
