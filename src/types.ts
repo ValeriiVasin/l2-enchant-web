@@ -5,6 +5,12 @@ export type EnchantMode =
   // item drops to the safe level when enchant fails
   // example: "Talisman of Authority" / "Талисман Властителя"
   | 'drop'
+  // item drops to the safe level when enchant fails
+  // but the price of enchant is 2 equal items
+  // - "items" here - first level items
+  // - "enchants" - times we tried to ehcnant
+  // example: "Tantar Enchant Scroll" / "Свиток Провидца"
+  | 'double-drop'
   // when enchant fails - items stays, only enchant schroll is a price
   // example: "Dimensional Talisman" / "Талисман Иного Измерения"
   | 'safe';

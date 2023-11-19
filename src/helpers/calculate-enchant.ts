@@ -11,6 +11,8 @@ export function calculateEnchant(
       return convertStrategyResult(modeSafe(chances));
     case 'drop':
       return convertStrategyResult(modeDrop(chances));
+    case 'double-drop':
+      return convertStrategyResult(modeDoubleDrop(chances));
   }
 }
 
@@ -64,12 +66,34 @@ const modeDrop: StrategyFunction = (chances) => {
     const chance = chances[i];
     const coef = 100 / chance;
 
-    enchants[i] = enchants[i - 1] * coef + coef;
+    enchants[i] = (enchants[i - 1] + 1) * coef;
   }
 
   return {
     chances,
     items: Array(chances.length).fill(1),
+    enchants,
+  };
+};
+
+const modeDoubleDrop: StrategyFunction = (chances) => {
+  const coef = 100 / chances[0];
+  const items = [1 + coef];
+  const enchants = [coef];
+
+  for (let i = 1; i < chances.length; i++) {
+    const chance = chances[i];
+    const coef = 100 / chance;
+
+    enchants[i] = enchants[i - 1] * 2 * coef + coef;
+    // coef times to enchant groups of 2 prev items
+    // and `koef - 1` times we receive item back
+    items[i] = items[i - 1] * 2 * coef - (coef - 1);
+  }
+
+  return {
+    chances,
+    items,
     enchants,
   };
 };
