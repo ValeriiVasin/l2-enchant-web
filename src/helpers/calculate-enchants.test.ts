@@ -14,3 +14,7 @@ test('strategy: destroy', () => {
 test('strategy: safe', () => {
   expect(calculateEnchant(chances, 'safe')).toMatchSnapshot();
 });
+
+test('strategy: double drop', () => {
+  expect(calculateEnchant(chances, 'double-drop')).toMatchSnapshot();
+});

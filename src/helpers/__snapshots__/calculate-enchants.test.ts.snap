@@ -20,6 +20,26 @@ exports[`strategy: destroy 1`] = `
 ]
 `;
 
+exports[`strategy: double drop 1`] = `
+[
+  {
+    "chance": 50,
+    "enchants": 2,
+    "items": 3,
+  },
+  {
+    "chance": 50,
+    "enchants": 10,
+    "items": 11,
+  },
+  {
+    "chance": 50,
+    "enchants": 42,
+    "items": 43,
+  },
+]
+`;
+
 exports[`strategy: drop 1`] = `
 [
   {

@@ -19,6 +19,7 @@ import { heroCrown } from './enchants/hero-crown';
 import { hunterEarring } from './enchants/hunter-earring';
 import { talismanOfAden } from './enchants/talisman-of-aden';
 import { saihaCloaks } from './enchants/saiha-cloaks';
+import { tantar } from './enchants/tantar';
 
 type Route = {
   path: string;
@@ -46,6 +47,7 @@ export const routerConfig = [
     hunterEarring,
     talismanOfAden,
     saihaCloaks,
+    tantar,
   ]),
   {
     path: '/dimensional-talisman',
