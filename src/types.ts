@@ -1,4 +1,4 @@
-export type Mode =
+export type EnchantMode =
   // item destroys when enchant fails
   // Example: Dragon Belt / "Пояс Дракона"
   | 'destroy'
@@ -24,4 +24,22 @@ export type TableRowProps = {
   chance: number;
   result: number;
   formatEnchant?: FormatEnchantFunction;
+};
+
+export type EnchantConfig = {
+  title: string;
+  chances: Array<number> | Array<Array<number>>;
+  mode: EnchantMode;
+  resultMode: EnchantResultMode;
+  startIndex: number;
+  type: 'level' | 'plus';
+};
+
+export type RouterConfigItem = {
+  // control item presence
+  // `toDate` should always be next day after event end date
+  enabled?: boolean | { fromDate: Date; toDate: Date };
+  label: string;
+  path: string;
+  config: EnchantConfig | Array<EnchantConfig>;
 };

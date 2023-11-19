@@ -1,8 +1,8 @@
-import { EnchantResult, Mode } from '../types';
+import { EnchantResult, EnchantMode } from '../types';
 
 export function calculateEnchant(
   chances: number[],
-  mode: Mode,
+  mode: EnchantMode,
 ): Array<EnchantResult> {
   switch (mode) {
     case 'destroy':
