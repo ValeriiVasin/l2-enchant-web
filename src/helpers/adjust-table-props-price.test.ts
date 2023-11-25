@@ -1,3 +1,4 @@
+import { describe, test, expect } from '@jest/globals';
 import { TableRowProps } from '../types';
 import { adjustTablePropsPrice } from './adjust-table-props-price';
 
@@ -9,7 +10,7 @@ describe('adjust table props price', () => {
   test('throws when chances length does not match rows', () => {
     expect(() =>
       adjustTablePropsPrice(createResultsProps([1, 2]), [2]),
-    ).toThrowError('Table rows amount does not match prices amount');
+    ).toThrow('Table rows amount does not match prices amount');
   });
 
   test('does not modify existing objects', () => {

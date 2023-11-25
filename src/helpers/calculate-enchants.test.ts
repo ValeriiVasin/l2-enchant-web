@@ -1,4 +1,4 @@
-import { test } from '@jest/globals';
+import { test, expect } from '@jest/globals';
 import { calculateEnchant } from './calculate-enchant';
 
 const chances = [50, 50, 50];

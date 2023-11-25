@@ -1,4 +1,4 @@
-import { test } from '@jest/globals';
+import { test, expect } from '@jest/globals';
 import { unwrapSafeDrops } from './unwrap-safe-drops';
 
 test('unwraps safe drops', () => {
