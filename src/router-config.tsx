@@ -20,6 +20,7 @@ import { hunterEarring } from './enchants/hunter-earring';
 import { talismanOfAden } from './enchants/talisman-of-aden';
 import { saihaCloaks } from './enchants/saiha-cloaks';
 import { tantar } from './enchants/tantar';
+import { piercingMask } from './enchants/piercing-mask';
 
 type Route = {
   path: string;
@@ -30,23 +31,24 @@ type Route = {
 export const routerConfig = [
   ...createRouterConfig([
     agathions,
-    eventFronzenCanyon,
     clanCloak,
-    stones,
     crystalAden,
     crystalHardin,
-    talismanOfEva,
-    talismanOfBenir,
-    growthRune,
-    dragonPendant,
-    talismanOfMagmeld,
-    talismanOfAuthority,
     dragonBelt,
-    symbols,
+    dragonPendant,
+    eventFronzenCanyon,
+    growthRune,
     heroCrown,
     hunterEarring,
-    talismanOfAden,
+    piercingMask,
     saihaCloaks,
+    stones,
+    symbols,
+    talismanOfAden,
+    talismanOfAuthority,
+    talismanOfBenir,
+    talismanOfEva,
+    talismanOfMagmeld,
     tantar,
   ]),
   {
