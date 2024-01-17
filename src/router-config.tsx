@@ -21,6 +21,7 @@ import { talismanOfAden } from './enchants/talisman-of-aden';
 import { saihaCloaks } from './enchants/saiha-cloaks';
 import { tantar } from './enchants/tantar';
 import { piercingMask } from './enchants/piercing-mask';
+import { eventFronzenCanyon3 } from './enchants/event-frozen-canyon-3';
 
 type Route = {
   path: string;
@@ -37,6 +38,7 @@ export const routerConfig = [
     dragonBelt,
     dragonPendant,
     eventFronzenCanyon,
+    eventFronzenCanyon3,
     growthRune,
     heroCrown,
     hunterEarring,
