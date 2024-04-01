@@ -24,7 +24,7 @@
     "@types/lodash": "^4.17.0",
     "@types/react-dom": "^18.2.23",
     "@types/react-router-dom": "^5.3.3",
-    "@types/react": "^18.2.69",
+    "@types/react": "^18.2.73",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "@vitejs/plugin-react": "^4.2.1",
