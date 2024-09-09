@@ -22,6 +22,7 @@ import { saihaCloaks } from './enchants/saiha-cloaks';
 import { tantar } from './enchants/tantar';
 import { piercingMask } from './enchants/piercing-mask';
 import { eventFronzenCanyon3 } from './enchants/event-frozen-canyon-3';
+import { talismanOfBaium } from './enchants/talisman-of-baium';
 
 type Route = {
   path: string;
@@ -48,6 +49,7 @@ export const routerConfig = [
     symbols,
     talismanOfAden,
     talismanOfAuthority,
+    talismanOfBaium,
     talismanOfBenir,
     talismanOfEva,
     talismanOfMagmeld,
