@@ -1,7 +1,7 @@
-import { useFormatter } from '../../hooks/use-formatter';
-import { useTableRowProps } from '../../hooks/use-table-row-props';
-import { EnchantConfig } from '../../types';
-import { EnchantTable } from './enchant-table';
+import { useFormatter } from '@/hooks/use-formatter';
+import { useTableRowProps } from '@/hooks/use-table-row-props';
+import { EnchantConfig } from '@/types';
+import { EnchantTable } from '@/components/base/enchant-table';
 
 type PageContentProps = {
   config: EnchantConfig | Array<EnchantConfig>;
@@ -11,7 +11,7 @@ export function PageContent({ config }: PageContentProps) {
   const configs = Array.isArray(config) ? config : [config];
 
   return (
-    <div className="pure-g">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
       {configs.map((config) => (
         <Table key={config.title} {...config} />
       ))}

@@ -15,7 +15,7 @@ export const talismanOfBaium: RouterConfigItem = {
       startIndex: 1,
     },
     {
-      title: 'Свиток: Модифицировать Талисман Баюма',
+      title: 'Свиток: Мод. Талисман Баюма',
       chances,
       mode: 'destroy',
       resultMode: 'enchants',

@@ -1,9 +1,9 @@
 import { EnchantTable } from './base/enchant-table';
-import { calculateEnchant } from '../helpers/calculate-enchant';
-import { toTableRowProps } from '../helpers/to-table-row-props';
-import { useFormatter } from '../hooks/use-formatter';
-import { adjustTablePropsPrice } from '../helpers/adjust-table-props-price';
-import { TableRowProps } from '../types';
+import { calculateEnchant } from '@/helpers/calculate-enchant';
+import { toTableRowProps } from '@/helpers/to-table-row-props';
+import { useFormatter } from '@/hooks/use-formatter';
+import { adjustTablePropsPrice } from '@/helpers/adjust-table-props-price';
+import { TableRowProps } from '@/types';
 
 function prepareRows(): Array<TableRowProps> {
   const chances = [100, 50, 50, 50, 50, 100, 30, 20, 10, 2];
@@ -25,10 +25,12 @@ export function DimensionalTalisman() {
   const formatEnchant = useFormatter({ startIndex: 1, type: 'level' });
 
   return (
-    <EnchantTable
-      title="Талисман Иного Измерения"
-      tableRows={tableRows}
-      formatEnchant={formatEnchant}
-    />
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+      <EnchantTable
+        title="Талисман Иного Измерения"
+        tableRows={tableRows}
+        formatEnchant={formatEnchant}
+      />
+    </div>
   );
 }
