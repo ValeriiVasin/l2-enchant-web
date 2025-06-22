@@ -13,8 +13,10 @@ export function MenuItem({
     <li>
       <Link
         className={cn('block px-2 py-1 rounded-md transition-colors', {
-          'bg-primary/10 font-medium text-primary': isActive,
-          'text-gray-600 hover:bg-gray-100': !isActive,
+          'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200':
+            isActive,
+          'text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700':
+            !isActive,
         })}
         to={pathname}
       >
