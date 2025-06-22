@@ -25,14 +25,14 @@ export function EnchantTable({
   return (
     <div className="rounded-md border shadow-sm mb-8 overflow-hidden">
       <Table>
-        <TableHeader>
+        <TableHeader className="bg-gray-100 dark:bg-gray-700">
           <ShadcnTableRow>
-            <TableHead colSpan={3}>{title}</TableHead>
-          </ShadcnTableRow>
-          <ShadcnTableRow>
-            <TableHead>Enchant</TableHead>
-            <TableHead>Chance</TableHead>
-            <TableHead>Result</TableHead>
+            <TableHead
+              colSpan={3}
+              className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-center"
+            >
+              {title}
+            </TableHead>
           </ShadcnTableRow>
         </TableHeader>
         <TableBody>
