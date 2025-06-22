@@ -4,10 +4,8 @@ import { useEffect } from 'react';
 
 export function App() {
   useEffect(() => {
-    const isSystemDarkMode = window.matchMedia(
-      '(prefers-color-scheme: dark)',
-    ).matches;
-    document.documentElement.classList.toggle('dark', isSystemDarkMode);
+    const isDarkMode = getIsDarkModeEnabled();
+    document.documentElement.classList.toggle('dark', isDarkMode);
   }, []);
 
   return (
@@ -28,4 +26,18 @@ export function App() {
       </div>
     </div>
   );
+}
+
+function getIsDarkModeEnabled(): boolean {
+  const urlMode = window.location.hash.match(/#mode=(dark|light)/)?.[1];
+
+  if (urlMode === 'dark') {
+    return true;
+  }
+
+  if (urlMode === 'light') {
+    return false;
+  }
+
+  return window.matchMedia('(prefers-color-scheme: dark)').matches;
 }
