@@ -12,7 +12,7 @@ export function MenuItem({
   return (
     <li>
       <Link
-        className={cn('block px-4 py-2 rounded-md transition-colors', {
+        className={cn('block px-2 py-1 rounded-md transition-colors', {
           'bg-primary/10 font-medium text-primary': isActive,
           'text-gray-600 hover:bg-gray-100': !isActive,
         })}

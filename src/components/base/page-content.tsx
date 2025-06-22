@@ -11,7 +11,7 @@ export function PageContent({ config }: PageContentProps) {
   const configs = Array.isArray(config) ? config : [config];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
       {configs.map((config) => (
         <Table key={config.title} {...config} />
       ))}

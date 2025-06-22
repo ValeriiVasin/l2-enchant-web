@@ -15,7 +15,7 @@ export function App() {
             </div>
           </div>
           <div className="w-full md:w-3/4">
-            <div className="bg-white rounded-lg shadow-sm p-6">
+            <div className="bg-white rounded-lg shadow-sm p-4">
               <Outlet />
             </div>
           </div>

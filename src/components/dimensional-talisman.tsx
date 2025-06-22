@@ -25,10 +25,12 @@ export function DimensionalTalisman() {
   const formatEnchant = useFormatter({ startIndex: 1, type: 'level' });
 
   return (
-    <EnchantTable
-      title="Талисман Иного Измерения"
-      tableRows={tableRows}
-      formatEnchant={formatEnchant}
-    />
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+      <EnchantTable
+        title="Талисман Иного Измерения"
+        tableRows={tableRows}
+        formatEnchant={formatEnchant}
+      />
+    </div>
   );
 }
