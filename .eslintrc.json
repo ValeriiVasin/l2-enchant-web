@@ -15,7 +15,14 @@
   "settings": {
     "react": {
       "version": "detect"
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
     }
   },
-  "rules": {}
+  "rules": {
+    "react/prop-types": "off"
+  }
 }
