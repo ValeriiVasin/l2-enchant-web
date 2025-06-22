@@ -3,8 +3,8 @@ import { MenuItem } from './menu-item';
 
 export function Menu() {
   return (
-    <div className="pure-menu">
-      <ul className="pure-menu-list">
+    <div className="mb-4">
+      <ul className="space-y-1">
         {routerConfig.map(
           (item) =>
             item && (

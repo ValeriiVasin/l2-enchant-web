@@ -10,10 +10,14 @@ export function TableRow({
   formatEnchant = defaultFormatEnchant,
 }: TableRowProps) {
   return (
-    <tr>
-      <td>{formatEnchant(index)}</td>
-      <td>{chance}%</td>
-      <td>{result.toFixed(2)}</td>
+    <tr className="bg-white hover:bg-gray-50">
+      <td className="py-2 px-4 border-r border-gray-200">
+        {formatEnchant(index)}
+      </td>
+      <td className="py-2 px-4 text-center border-r border-gray-200">
+        {chance}%
+      </td>
+      <td className="py-2 px-4 text-right">{result.toFixed(2)}</td>
     </tr>
   );
 }
