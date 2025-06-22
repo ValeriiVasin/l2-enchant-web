@@ -1,4 +1,4 @@
-import { routerConfig } from '../../../router-config';
+import { routerConfig } from '@/router-config';
 import { MenuItem } from './menu-item';
 
 export function Menu() {

@@ -1,4 +1,4 @@
-import { FormatEnchantFunction, TableRowProps } from '../../types';
+import { FormatEnchantFunction, TableRowProps } from '@/types';
 import {
   Table,
   TableHeader,

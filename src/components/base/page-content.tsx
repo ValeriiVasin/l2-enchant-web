@@ -1,7 +1,7 @@
-import { useFormatter } from '../../hooks/use-formatter';
-import { useTableRowProps } from '../../hooks/use-table-row-props';
-import { EnchantConfig } from '../../types';
-import { EnchantTable } from './enchant-table';
+import { useFormatter } from '@/hooks/use-formatter';
+import { useTableRowProps } from '@/hooks/use-table-row-props';
+import { EnchantConfig } from '@/types';
+import { EnchantTable } from '@/components/base/enchant-table';
 
 type PageContentProps = {
   config: EnchantConfig | Array<EnchantConfig>;
