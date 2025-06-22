@@ -2,6 +2,7 @@ import tailwindcssAnimate from 'tailwindcss-animate';
 
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: ['class'],
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
@@ -38,6 +39,13 @@ export default {
         card: {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
+        },
+        chart: {
+          1: 'hsl(var(--chart-1))',
+          2: 'hsl(var(--chart-2))',
+          3: 'hsl(var(--chart-3))',
+          4: 'hsl(var(--chart-4))',
+          5: 'hsl(var(--chart-5))',
         },
       },
       borderRadius: {
